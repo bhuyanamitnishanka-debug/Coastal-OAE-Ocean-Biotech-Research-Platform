@@ -1,0 +1,6 @@
+{
+  "name": "Coastal OAE & Ocean-Biotech Research Platform",
+  "description": "Interactive 3D digital twin simulation of Coastal Ocean Alkalinity Enhancement (OAE), marine biotechnology micro-aquariums, offshore renewable energy clusters, and biogeochemical telemetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

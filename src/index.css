@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-display {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+/* Custom neon glow for .CSV EXPORT READY button */
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.7), inset 0 0 10px rgba(0, 210, 255, 0.4);
+    border-color: rgba(236, 72, 153, 0.9);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 1), 0 0 15px rgba(0, 210, 255, 0.8), inset 0 0 15px rgba(0, 210, 255, 0.6);
+    border-color: #f43f5e;
+  }
+}
+
+.neon-export-btn {
+  animation: neon-pulse 2.5s infinite ease-in-out;
+}
+
+/* Dynamic background color animation for data rows deviating >5% from moving average */
+@keyframes telemetry-row-alert {
+  0%, 100% {
+    background-color: rgba(239, 68, 68, 0.16);
+    border-color: rgba(239, 68, 68, 0.45);
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.25);
+  }
+  50% {
+    background-color: rgba(245, 158, 11, 0.32);
+    border-color: rgba(245, 158, 11, 0.75);
+    box-shadow: 0 0 22px rgba(245, 158, 11, 0.45);
+  }
+}
+
+.animate-row-deviation {
+  animation: telemetry-row-alert 1.6s infinite ease-in-out;
+}
